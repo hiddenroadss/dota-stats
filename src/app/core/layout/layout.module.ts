@@ -8,7 +8,13 @@ import { ContainerModule } from '@shared/components/container/container.module';
 
 @NgModule({
     declarations: [LayoutComponent],
-    imports: [CommonModule, RouterModule, HeaderModule, FooterModule, ContainerModule],
+    imports: [
+        CommonModule,
+        RouterModule,
+        HeaderModule,
+        FooterModule,
+        ContainerModule,
+    ],
     exports: [LayoutComponent],
 })
 export class LayoutModule {}
