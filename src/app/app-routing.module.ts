@@ -10,14 +10,16 @@ const routes: Routes = [
             {
                 path: '',
                 pathMatch: 'full',
-                redirectTo: 'heroes'
+                redirectTo: 'heroes',
             },
             {
                 path: 'heroes',
-                loadChildren: () => import('./pages/heroes/heroes.module').then(m => m.HeroesModule)
+                loadChildren: () =>
+                    import('./pages/heroes/heroes.module').then(
+                        (m) => m.HeroesModule
+                    ),
             },
-          
-        ]
+        ],
     },
 ];
 

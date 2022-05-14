@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutModule } from './layout/layout.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [],
-    imports: [CommonModule],
-    exports: [LayoutModule],
+    imports: [CommonModule, HttpClientModule],
+    exports: [LayoutModule, HttpClientModule],
 })
 export class CoreModule {}
