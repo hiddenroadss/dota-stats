@@ -2,7 +2,7 @@
     <ng-container *ngSwitchCase="breakpoints.Tablet">
         <app-header></app-header>
         <main>
-            <ng-container *ngTemplateOutlet="template"></ng-container>
+            <ng-container *ngTemplateOutlet="template; context: { mode: 'fluid' }"></ng-container>
         </main>
     </ng-container>
 
@@ -22,6 +22,8 @@
     </ng-container>
 </ng-container>
 
-<ng-template #template>
-    <router-outlet></router-outlet>
+<ng-template #template let-mode="mode">
+    <app-container [mode]="mode">
+        <router-outlet></router-outlet>
+    </app-container>
 </ng-template>
