@@ -10,9 +10,9 @@ import { CoreModule } from '@core/core.module';
     declarations: [AppComponent],
     imports: [
         BrowserModule,
+        CoreModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-        CoreModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
