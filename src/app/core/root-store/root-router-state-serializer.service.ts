@@ -3,28 +3,29 @@ import { Params, RouterStateSnapshot } from '@angular/router';
 import { RouterStateSerializer } from '@ngrx/router-store';
 
 export interface RouterUrlState {
-  url: string;
-  params: Params;
-  queryParams: Params;
-  data?: Record<string, any>;
+    url: string;
+    params: Params;
+    queryParams: Params;
+    data?: Record<string, any>;
 }
 
 @Injectable()
-export class RootRouterStateSerializerService implements RouterStateSerializer<RouterUrlState> {
+export class RootRouterStateSerializerService
+    implements RouterStateSerializer<RouterUrlState>
+{
+    serialize(routerState: RouterStateSnapshot): RouterUrlState {
+        let route = routerState.root;
 
-  serialize(routerState: RouterStateSnapshot): RouterUrlState {
-    let route = routerState.root;
+        while (route.firstChild) {
+            route = route.firstChild;
+        }
 
-    while (route.firstChild) {
-      route = route.firstChild;
+        const {
+            url,
+            root: { queryParams },
+        } = routerState;
+        const { params, data } = route;
+
+        return { url, params, queryParams, data };
     }
-
-    const {
-      url,
-      root: { queryParams },
-    } = routerState;
-    const { params, data } = route;
-
-    return { url, params, queryParams, data };
-  }
 }

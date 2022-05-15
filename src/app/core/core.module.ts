@@ -8,7 +8,16 @@ import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
     declarations: [],
-    imports: [HttpClientModule, LayoutModule, RootStoreModule, !environment.production ? StoreDevtoolsModule.instrument({ logOnly: environment.production}) : []],
+    imports: [
+        HttpClientModule,
+        LayoutModule,
+        RootStoreModule,
+        !environment.production
+            ? StoreDevtoolsModule.instrument({
+                  logOnly: environment.production,
+              })
+            : [],
+    ],
     providers: [
         {
             provide: ENVIRONMENT,
