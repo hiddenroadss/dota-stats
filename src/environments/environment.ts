@@ -2,8 +2,16 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
+import { Environment } from '@core/services/environment.service';
+
+declare var process: any;
+
+export const environment: Environment = {
     production: false,
+    api: {
+        key: process.env['API_KEY'] || '',
+        baseUrl: 'https://api.opendota.com/api/',
+    },
 };
 
 /*

@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { HeroesApiService } from '@core/services/heroes-api.service';
 
 @Component({
     selector: 'app-heroes',
