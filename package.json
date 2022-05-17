@@ -42,6 +42,7 @@
     "@angular-eslint/template-parser": "13.2.1",
     "@angular/cli": "~13.3.4",
     "@angular/compiler-cli": "~13.3.0",
+    "@angular/localize": "^13.3.8",
     "@ngrx/schematics": "^13.2.0",
     "@types/dotenv-webpack": "^7.0.3",
     "@types/jasmine": "~3.10.0",

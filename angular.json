@@ -16,6 +16,12 @@
       },
       "root": "",
       "sourceRoot": "src",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ua": "src/i18n/messages.ua.xlf"
+        }
+      },
       "prefix": "app",
       "architect": {
         "build": {
@@ -68,6 +74,9 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "ua": {
+              "localize": ["ua"]
             }
           },
           "defaultConfiguration": "production"
@@ -80,6 +89,9 @@
             },
             "development": {
               "browserTarget": "dota:build:development"
+            },
+            "ua": {
+              "browserTarget": "dota:build:ua"
             }
           },
           "defaultConfiguration": "development"

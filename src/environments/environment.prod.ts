@@ -1,5 +1,8 @@
 import { Environment } from '@core/services/environment.service';
 
+//TODO remove it
+declare var process: any;
+
 export const environment: Environment = {
     production: true,
     api: {
