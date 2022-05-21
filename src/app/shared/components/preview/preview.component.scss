@@ -1,0 +1,17 @@
+.preview {
+  
+    &__box {
+        & > h2 {
+            visibility: hidden;
+        }
+        &.active > h2 {
+            visibility: visible;
+        }
+
+        transition: transform .3s;
+        &:hover {
+            transform: scale(1.3);
+        }
+
+    }
+}

@@ -1,0 +1,8 @@
+<div
+    class="preview__box"
+    *ngIf="hero"
+    [ngStyle]="setBackgroundImage(hero.name)"
+    hoverClass="active"
+>
+    <h2>{{ hero.localized_name }}</h2>
+</div>

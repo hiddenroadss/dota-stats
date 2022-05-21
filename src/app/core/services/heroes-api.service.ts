@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { heroesStub } from '@core/utils/stubs/heroes.stub';
+import { heroesNames, heroesStub } from '@core/utils/stubs/heroes.stub';
 import { Hero } from '@pages/heroes/common/hero.interface';
 import { map, Observable, of, scan } from 'rxjs';
 import { ApiService } from './api.service';
@@ -21,7 +21,7 @@ export class HeroesApiService {
     }
 
     loadHeroes(): Observable<Hero[]> {
-        return of(heroesStub).pipe(
+        return of(heroesNames).pipe(
             map((values) => {
                 const vals = Object.values(values);
                 return vals;

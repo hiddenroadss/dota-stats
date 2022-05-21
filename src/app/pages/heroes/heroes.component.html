@@ -4,6 +4,6 @@
         web="4"
         *ngFor="let hero of heroes; trackBy: trackByFunc"
     >
-        Some content
+        <app-preview [hero]="hero"></app-preview>
     </app-column>
 </app-row>
