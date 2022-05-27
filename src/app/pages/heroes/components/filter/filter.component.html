@@ -1,0 +1,16 @@
+<h2>Filter Heroes</h2>
+<form [formGroup]="form">
+    <app-radio-button
+        [options]="['S', 'A', 'I']"
+        formControlName="attribute"
+        label="Attribute"
+        (valueChanged)="test($event)"
+    ></app-radio-button>
+    <app-radio-button
+        formControlName="complexity"
+        [options]="[1, 2, 3]"
+        label="Complexity"
+    ></app-radio-button>
+    <input type="text" />
+    {{ form.value | json}}
+</form>

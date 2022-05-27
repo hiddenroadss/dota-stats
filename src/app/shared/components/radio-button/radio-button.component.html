@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="radio__label">
+        {{ label }}
+    </div>
+    <div class="radio__list">
+        <div
+            class="radio__option"
+            (click)="onClick(option)"
+            *ngFor="let option of options"
+            [ngClass]="option === value ? 'active' : ''"
+        >
+            <span>{{ option }}</span>
+        </div>
+    </div>
+</div>

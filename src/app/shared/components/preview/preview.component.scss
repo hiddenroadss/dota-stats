@@ -1,7 +1,11 @@
 .preview {
   
     &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
         & > h2 {
+            padding: .5rem;
             visibility: hidden;
         }
         &.active > h2 {
