@@ -45,7 +45,7 @@
     "@angular/localize": "^13.3.8",
     "@ngrx/schematics": "^13.2.0",
     "@types/dotenv-webpack": "^7.0.3",
-    "@types/jasmine": "~3.10.0",
+    "@types/jasmine": "^3.10.6",
     "@types/node": "^16.11.35",
     "@typescript-eslint/eslint-plugin": "5.17.0",
     "@typescript-eslint/parser": "5.17.0",
@@ -59,7 +59,9 @@
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
+    "karma-jasmine-diff-reporter": "^2.0.1",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "karma-mocha-reporter": "^2.2.5",
     "prettier": "2.6.2",
     "typescript": "~4.6.2"
   }

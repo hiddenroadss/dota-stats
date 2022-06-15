@@ -8,9 +8,10 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma'),
+      require('karma-mocha-reporter'),
+      require('karma-jasmine-diff-reporter'),
     ],
     client: {
       jasmine: {
@@ -32,13 +33,29 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['jasmine-diff','mocha'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
+
+    mochaReporter: {
+      output: 'minimum'
+    },
+    jasmineDiffReporter: {
+      color: {
+        expectedBg: 'bgGreen',
+        expectedWhitespaceBg: 'bgGreen',
+        expectedFg: 'white',
+ 
+        actualBg: 'bgRed',
+        actualWhitespaceBg: 'bgRed',
+        actualFg: 'white',
+ 
+      },
+    }
   });
 };

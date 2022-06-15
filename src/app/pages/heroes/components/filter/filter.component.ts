@@ -20,6 +20,6 @@ export class FilterComponent implements OnInit {
     ngOnInit(): void {}
 
     test(value: any) {
-        console.log(value, 'ddd')
+        console.log(value, 'ddd');
     }
 }
