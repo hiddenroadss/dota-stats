@@ -10,7 +10,7 @@ export interface Environment {
 
 export const ENVIRONMENT = new InjectionToken<Environment>('Environment');
 
-const ENVIRONMENT_DEFAULT: Environment = {
+export const ENVIRONMENT_DEFAULT: Environment = {
     production: false,
     api: {
         key: '',
