@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
     styleUrls: ['./filter.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent {
     form: FormGroup;
     constructor(private fb: FormBuilder) {
         this.form = this.fb.group({
@@ -16,8 +16,6 @@ export class FilterComponent implements OnInit {
             search: [],
         });
     }
-
-    ngOnInit(): void {}
 
     test(value: any) {
         console.log(value, 'ddd');
